@@ -6,8 +6,8 @@
 // Linux settings
 #define ZIMAGE_ADDR    (0x20008000)
 #define PARAMS_ADDR    (0x20000100)
-#define LINUXIMAGE_FILENAME "/zImage"
-#define DTB_FILENAME        "/nintendo3ds_ctr.dtb"
+#define LINUXIMAGE_FILENAME "/Linux/zImage"
+#define DTB_FILENAME        "/Linux/nintendo3ds_ctr.dtb"
 
 void runLinux(void);
 void shutdown(void);
