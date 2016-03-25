@@ -7,25 +7,11 @@
 */
 
 #include "fs.h"
-#include "firm.h"
 #include "linux.h"
 
-u16 pressed;
 
 void main(){
     mountSD();
-    
-    pressed = HID_PAD;
-    if(pressed & 32){
-        loadLinux();
-        runLinux();
-    }else{
-        setupCFW();
-    }
-}
-
-void startCFW(){
-    if(!loadFirm()) return;
-    if(!patchFirm()) return;
-    launchFirm();
+    loadLinux();
+    runLinux();
 }
